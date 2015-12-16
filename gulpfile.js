@@ -11,12 +11,21 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var glob = require('glob');
 var es = require('event-stream');
+var techy = require('techy');
+  customVar: 'friend'
+});
 
 gulp.task('server', function(){
   connect.server({
     livereload: true
   }); 
 })
+
+gulp.task('compile', function() {
+    gulp.src('./src/**/*.*')
+    .pipe(techy())
+    .pipe(gulp.dest('./dest'));
+});
 
 // gulp.task('browserify', function (){
 //   return browserify('./src/scripts/app.js')
@@ -81,6 +90,7 @@ gulp.task('watch', function(){
   gulp.watch('./src/styles/*.scss', ['style']);
   // gulp.watch('./src/scripts/*.js', ['browserify']);
   gulp.watch(['./*.html'],['html']); 
+  gulp.watch(['src/**/*.*', 'themes/default/css/**/*.js'], ['compile']);
 });
 
 

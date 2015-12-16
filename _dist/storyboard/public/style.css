@@ -1,0 +1,51 @@
+.chapter {
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-direction: row;
+}
+
+.image {
+  margin-left: 10%;
+  margin-top: 2%;
+  border: 1px solid black;
+  width: 320px;
+  height: 240px;
+  text-align: center;
+}
+
+.comment {
+  text-align: center;
+  margin:20px;
+  border: 1px solid black;
+
+}
+
+.text {
+  background-color: pink;
+  margin-right: 10%;
+  width: 320px;
+  height: 240px;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.placeholder-text {
+  padding-top: 90px;
+}
+
+p {
+  padding: 2%
+}
+
+.two-images {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-direction: row;
+    padding-top: 20%;
+}
